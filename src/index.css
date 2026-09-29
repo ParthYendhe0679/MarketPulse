@@ -1,0 +1,128 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-sans: 'Poppins', sans-serif;
+  --color-primary-blue: #4F7DF9;
+  --color-yellow: #FFD54A;
+  --color-green: #6EE7B7;
+  --color-pink: #FF9ECF;
+  --color-orange: #FFB347;
+  --color-red: #FF6B6B;
+  --color-bg-base: #FAFAFA;
+  --color-dark-base: #111111;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #FAFAFA;
+  color: #111111;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+}
+
+/* Custom Neo Brutalism utility classes */
+.neo-box {
+  border: 3px solid #111111;
+  box-shadow: 4px 4px 0px 0px #111111;
+  border-radius: 16px;
+  background-color: #FFFFFF;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.neo-box-hover:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 7px 7px 0px 0px #111111;
+}
+
+.neo-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #111111;
+  box-shadow: 4px 4px 0px 0px #111111;
+  border-radius: 12px;
+  font-weight: 700;
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  user-select: none;
+  font-family: var(--font-display);
+}
+
+.neo-btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px 0px #111111;
+}
+
+.neo-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px 0px #111111;
+}
+
+/* Custom offset shadow colors for different branding elements */
+.shadow-pink {
+  box-shadow: 4px 4px 0px 0px #FF9ECF !important;
+  border-color: #111111 !important;
+}
+.shadow-yellow {
+  box-shadow: 4px 4px 0px 0px #FFD54A !important;
+  border-color: #111111 !important;
+}
+.shadow-blue {
+  box-shadow: 4px 4px 0px 0px #4F7DF9 !important;
+  border-color: #111111 !important;
+}
+.shadow-green {
+  box-shadow: 4px 4px 0px 0px #6EE7B7 !important;
+  border-color: #111111 !important;
+}
+.shadow-orange {
+  box-shadow: 4px 4px 0px 0px #FFB347 !important;
+  border-color: #111111 !important;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #FAFAFA;
+  border-left: 3px solid #111111;
+}
+::-webkit-scrollbar-thumb {
+  background: #111111;
+  border: 3px solid #FAFAFA;
+  border-radius: 10px;
+}
+
+/* Leaflet Overrides */
+.leaflet-container {
+  font-family: var(--font-sans);
+  border: 3px solid #111111 !important;
+  box-shadow: 4px 4px 0px 0px #111111 !important;
+  border-radius: 12px;
+}
+.leaflet-popup-content-wrapper {
+  border: 3px solid #111111 !important;
+  border-radius: 8px !important;
+  box-shadow: 3px 3px 0px 0px #111111 !important;
+  background: #FFFFFF !important;
+}
+.leaflet-popup-tip {
+  border: 3px solid #111111 !important;
+  background: #FFFFFF !important;
+}
+
+/* Hide default Vite styles on App elements if any */
+#root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  display: block;
+}
